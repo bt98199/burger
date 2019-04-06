@@ -1,0 +1,40 @@
+.jumbotron {
+    background-repeat: no-repeat;
+    background-position: center;
+    color: black;
+    background-size: cover;
+    padding: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.jumbotron > h1 {
+    font-family: Calibri, Airal;
+    color: black;
+    background-color: lightgrey;
+}
+
+#newburger {
+    border-radius: 5px;
+}
+
+#color-override {
+    color: #fff;
+}
+
+#lefthead {
+    background-color: #5cb85c;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#eatbutton, #trashbutton {
+    float: right;
+}
+
+#righthead {
+    background-color: #f0ad4e;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+}
