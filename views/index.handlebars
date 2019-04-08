@@ -1,12 +1,15 @@
 {{!-- Setup the index.handlebars to have the template that Handlebars can render onto. --}}
 <div class="container">
-
     <div class="jumbotron">
         <h1 id="color-override">Queue Burgers.  Eat 'em</h1>
-        <p id="color-override">Enter the Burgers below, then click to eat on left</p>
-        <br>
-        <h2 id="color-override">Enger the burger you want to make</h2>
-        <panel>
+        <p id="color-override">Enter the Burgers below, click on the buttons to eat or trash the leftovers</p>
+        <h2 id="color-override">Enter the burger you want to make</h2>
+    
+        <card>
+        <img src="/assets/img/hamburger-svg.png" alt="tasty_burger" id="burger1">
+
+        {{!-- <img src="../public/assets/img/burger.png" alt="tasty_burger" width="200" height="300" id="burger2"> --}}
+        {{!-- <img src="../public/assets/img/burger2.png" alt="tasty_burger" width="200" height="300" id="burger3"> --}}
             <form class="create-form">
                 <div class="form-group">
                     <label for="newburger" id="color-override">New Burger:</label>
@@ -15,15 +18,15 @@
                     <button type="submit" class="btn btn-success" id="addburger"><span class="fa fa-thumbs-up"></span></button>
                 </div>
             </form>
-        </panel>
+        </card>
     </div><!-- /jumbotron -->
 
     <div class="row">
         <!-- Undevoured Burgers -->
         <div class="col-sm-6">
-            <div class="panel panel-default">
-                <div class="panel-heading" id="lefthead"><strong>New Burgers</strong></div>
-                <div class="panel-body">
+            <div class="card card-default">
+                <div class="card-heading" id="lefthead"><strong>New Burgers</strong></div>
+                <div class="card-body leftcard">
                     <ul>
                         {{#each burgers}}
                             {{#unless devoured}}
@@ -38,9 +41,9 @@
         </div>
         <!-- Devoured Burgers -->
         <div class="col-sm-6">
-            <div class="panel panel-default">
-                <div class="panel-heading" id="righthead"><strong>Devoured Burgers</strong></div>
-                <div class="panel-body">
+            <div class="card card-default">
+                <div class="card-heading" id="righthead"><strong>Devoured Burgers</strong></div>
+                <div class="card-body rightcard">
                     <ul>
                         {{#each burgers}}
                             {{#if devoured}}
@@ -54,5 +57,4 @@
             </div>
         </div>
     </div><!-- /row -->
-
 </div><!-- /container -->

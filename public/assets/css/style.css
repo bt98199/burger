@@ -1,16 +1,21 @@
 .jumbotron {
-    background-repeat: no-repeat;
-    background-position: center;
+    background-color: beige;
     color: black;
-    background-size: cover;
     padding: 1.5rem;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
+    border: 1px solid black;
+    padding: 12px;
+    font-family: Calibri, Arial;
 }
 
 .jumbotron > h1 {
-    font-family: Calibri, Airal;
+    font-family: Calibri, Arial;
     color: black;
-    background-color: lightgrey;
+}
+
+.leftcard {
+    text-align: left;
+    padding: 24px 24px 24px 0;
 }
 
 #newburger {
@@ -18,7 +23,7 @@
 }
 
 #color-override {
-    color: #fff;
+    color: black;
 }
 
 #lefthead {
@@ -26,6 +31,7 @@
     color: white;
     text-align: center;
     font-size: 1.2em;
+    border: black 1px solid;
 }
 
 #eatbutton, #trashbutton {
@@ -37,4 +43,17 @@
     color: white;
     text-align: center;
     font-size: 1.2em;
+    border: black 1px solid;
+}
+
+#burger1 {
+    z-index: 5;
+    position: fixed;
+    align-self: right;
+    width: 200px;
+    background-color: beige;
+    right: 75px;
+    top: 30px;
+    
+ 
 }
