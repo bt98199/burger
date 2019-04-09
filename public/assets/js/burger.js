@@ -29,12 +29,30 @@ $(function() {
             devoured: 1
         };
 
-        // Send the PUT request.
+        // Send the PUT request for devoured status.
         $.ajax("/api/burgers/" + id, {
             type: "PUT",
             data: devouredState
         }).then(function() {
             console.log("Burger devoured");
+            location.reload();
+        });
+    });
+
+    $(".second-harvest-burger").on("click", function(event) {
+        event.preventDefault();
+
+        var id = $(this).data("id");
+        var devouredState = {
+            devoured: 0
+        };
+
+        // Send the PUT request for no longer devoured status.
+        $.ajax("/api/burgers/" + id, {
+            type: "PUT",
+            data: devouredState
+        }).then(function() {
+            console.log("Burger Lazurused");
             location.reload();
         });
     });
@@ -50,5 +68,8 @@ $(function() {
             url: "/api/burgers/" + id
         }).then(location.reload());
     });
+
+
+  
 
 })

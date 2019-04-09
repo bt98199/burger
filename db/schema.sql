@@ -10,4 +10,4 @@ create table burgers
 );
 select * from burgers;
 
--- \i  seeds.sql;
+-- \i  seeds.sql;  How can I make this sql file execute next, like a require('seeds.sql')?

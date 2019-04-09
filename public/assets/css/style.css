@@ -34,7 +34,7 @@
     border: black 1px solid;
 }
 
-#eatbutton, #trashbutton {
+#eatbutton, #trashbutton, #second-harvest-button {
     float: right;
 }
 
@@ -45,15 +45,14 @@
     font-size: 1.2em;
     border: black 1px solid;
 }
-
-#burger1 {
-    z-index: 5;
-    position: fixed;
-    align-self: right;
-    width: 200px;
-    background-color: beige;
-    right: 75px;
-    top: 30px;
-    
- 
+#burger {
+    width: 150px;
+    float: right
 }
+
+#api-id {
+    text-align: right;
+    float: right;
+    padding: 30px 10px 10px 10px;
+}
+
