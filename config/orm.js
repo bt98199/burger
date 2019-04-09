@@ -31,8 +31,7 @@ function objToSql(ob) {
 var orm = {
     // Display all burgers in the db.
     selectAll: function(table, cb) {
-        var queryString = "SELECT * FROM " + table; // ";" doesn't appear to be needed here
-
+        var queryString = "SELECT * FROM " + table + ";"; //  I don't know that the ; is needed here but will leave it in so long as it works
         connection.query(queryString, function(err, result) {
             if (err) {
                 throw err;
