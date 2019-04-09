@@ -2,9 +2,9 @@
 var mysql = require("mysql");
 
 // Evidently this is the Heroku version of the mysql add on https://devcenter.heroku.com/articles/jawsdb
-if (process.env.JAWSDB_URL) {
-    connection = mysql.createConnection(process.env.JAWSDB_URL);
-} else {
+// if (process.env.JAWSDB_URL) {
+//     connection = mysql.createConnection(process.env.JAWSDB_URL);
+// } else {
     connection = mysql.createConnection({
         host: "localhost",
         port: 3306,
@@ -12,7 +12,7 @@ if (process.env.JAWSDB_URL) {
         password: "",
         database: "burgers_db"
     });
-};
+// };
 
 connection.connect(function(err) {
     if (err) {
