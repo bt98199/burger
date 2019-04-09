@@ -6,6 +6,7 @@ create table burgers
     id INT NOT NULL AUTO_INCREMENT,
     burger_name VARCHAR(50) NOT NULL,
     devoured BOOLEAN DEFAULT false,
+    createdAt timestamp not null,
     PRIMARY KEY (id)
 );
 select * from burgers;
