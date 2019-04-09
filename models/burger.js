@@ -3,9 +3,6 @@ var orm = require("../config/orm.js");
 // The code that will call the ORM functions using burger specific input for the ORM.
 var burger = {
     // Display all burgers in the db.
-    /**
-     * @param {object} cb 
-     */
     selectAll: function(cb) {
         orm.selectAll("burgers", function(res) {
             cb(res);
